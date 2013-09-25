@@ -1,0 +1,12 @@
+#!/bin/bash
+# Génération et lancement d'un fichier .jar
+
+javac -d bin/ -classpath libs/eventbus-1.4. *.java
+
+
+jar cvf elementz.jar bin/org/elementz/*.class
+
+
+
+java -cp org/elementz.jar org.elementz.Application_Jeu 
+

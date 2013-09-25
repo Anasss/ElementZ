@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project>
+
+<property name="source.rep" value="src" />
+
+<target name="clean" description="Clean build directories">
+
+<echo message= "Suppression des fichiers issus de la compilation"/> 
+
+
+</target>
+
+
+<target name="compile" description="Compile l'application">
+
+<javac
+srcdir="${source.rep}"
+destdir="bin/"
+classpath="${libs/eventbus-1.4.}"
+source="1.6"
+fork="true" />
+
+</target>
+
+
+
+
+<target name="jar" >
+<jar destfile="ElementZ.jar">
+<fileset dir="${src.dir}/">
+<include name="org/**/*.properties" />
+<type type="file" />
+</fileset>
+<fileset dir="${obj.dir}" />
+</jar>
+</target>
+
+
+</project>
+
